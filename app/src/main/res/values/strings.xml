@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Fact Book</string>
+    <string name="next_button">Next</string>
+    <string name="previous_button">Previous</string>
+    <string name="share_button">Share Fact</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="placeholder_author">Kuldeep Chilwal</string>
+    <string name="about_author">Hi! I absolutely love to try new technologies and I love to engineer things. So, here I am making this app and trying to learn new technology. Hope you like this app and kindly check my other apps and donate using link in the app.</string>
+    <string name="author_image_content_description">"Image of app's author "</string>
+    <string name="donate_appeal_text">Help me code more! Buy me some coffee!!</string>
+    <string name="donate_INR">DONATE IN INR</string>
+    <string name="donate_USD">DONATE IN USD</string>
+    <string name="about">About</string>
+    <string name="about_author_menu_item_string">About Author</string>
+    <string name="donate_menu_item_string">Donate </string>
+    <string name="car1">The average fuel cost across all vehicles is 14.45 cents per mile, or about 23 miles per gallon.</string>
+    <string name="car2">The best selling car of all-time is the Toyota Corolla.</string>
+    <string name="car3">New The best selling car of all-time is the Toyota Corolla.</string>
+    <string name="car4">The U.S. consumes about half of the world’s gasoline.</string>
+    <string name="car5"> Ferrari manufactures a maximum of 14 cars a day.</string>
+    <string name="car6">The average consumer spends $400 a year on diagnostics, scheduled maintenance, and tune-ups.</string>
+    <string name="car7">The first windshield wipers were hand-operated.</string>
+    <string name="car8">White is the most popular car color.</string>
+    <string name="car9">The first cars did not have steering wheels. They were operated by a lever.</string>
+    <string name="car10">It takes half an ounce of gas to start a car.</string>
+    <string name="solarsystem1">Pluto is smaller in diameter than the U.S.</string>
+    <string name="solarsystem2">You can make volcanos using water as magma. </string>
+    <string name="solarsystem3">The edge of the solar system is 1,000 times farther away than Pluto.</string>
+    <string name="solarsystem4">Almost everything on Earth is a rare element. </string>
+    <string name="solarsystem5"> Jupiter has the biggest ocean of any planet, albeit made of metallic hydrogen.</string>
+    <string name="solarsystem6"> Jupiter .</string>
+    <string name="solarsystem7"> Jupiter has the biggen.</string>
+    <string name="solarsystem8"> Jupiter has the biggest oogen.</string>
+    <string name="solarsystem9"> Jupiter has the biggest ocean of any planet, albeit .</string>
+    <string name="solarsystem10"> Jupimter has the biggest ocean of any planet, albeit made of metallic hydrogen.</string>
+    <string name="welcome_text">Hi, Select categories from menu or click next for random facts</string>
+
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/aboutAuthorFragment"
+        android:title="@string/about_author_menu_item_string" />
+    <item
+        android:id="@+id/donateFragment"
+        android:title="@string/donate_menu_item_string" />
+</menu>
