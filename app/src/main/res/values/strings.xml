@@ -1,16 +1,11 @@
 <resources>
     <string name="app_name">Fact Book</string>
     <string name="next_button">Next</string>
-    <string name="previous_button">Previous</string>
+    <string name="previous_button">Prev</string>
     <string name="share_button">Share Fact</string>
     <string name="title_activity_home">HomeActivity</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world">Hello Square World!</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
     <string name="placeholder_author">Kuldeep Chilwal</string>
     <string name="about_author">Hi! I absolutely love to try new technologies and I love to engineer things. So, here I am making this app and trying to learn new technology. Hope you like this app and kindly check my other apps and donate using link in the app.</string>
     <string name="author_image_content_description">"Image of app's author "</string>
@@ -20,6 +15,8 @@
     <string name="about">About</string>
     <string name="about_author_menu_item_string">About Author</string>
     <string name="donate_menu_item_string">Donate </string>
+
+    <!--Facts about automobile-->
     <string name="car1">The average fuel cost across all vehicles is 14.45 cents per mile, or about 23 miles per gallon.</string>
     <string name="car2">The best selling car of all-time is the Toyota Corolla.</string>
     <string name="car3">New The best selling car of all-time is the Toyota Corolla.</string>
@@ -41,5 +38,6 @@
     <string name="solarsystem9"> Jupiter has the biggest ocean of any planet, albeit .</string>
     <string name="solarsystem10"> Jupimter has the biggest ocean of any planet, albeit made of metallic hydrogen.</string>
     <string name="welcome_text">Hi, Select categories from menu or click next for random facts</string>
+    <string name="car_facts">Facts about Cars</string>
 
 </resources>

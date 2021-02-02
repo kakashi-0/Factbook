@@ -33,7 +33,7 @@ class HomeFragment : Fragment() {
         }
         //next button on click listener
         binding.NextButton.setOnClickListener {
-            resID = resources.getIdentifier("${viewModel.idGenerator()}", "string", context?.packageName)
+            resID = resources.getIdentifier("${viewModel.randomIdGenerator()}", "string", context?.packageName)
             //saving resource id for viewModel
             viewModel.resourceId = resID
             //Displaying resource text

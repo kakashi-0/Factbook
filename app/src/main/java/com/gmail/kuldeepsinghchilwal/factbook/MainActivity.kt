@@ -2,6 +2,8 @@ package com.gmail.kuldeepsinghchilwal.factbook
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.MenuItem
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
@@ -11,6 +13,7 @@ import com.gmail.kuldeepsinghchilwal.factbook.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     lateinit var drawerLayout: DrawerLayout
+    private lateinit var viewModel: HomeFragmentViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,4 +28,5 @@ class MainActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.nav_host_fragment_container)
         return NavigationUI.navigateUp(navController,drawerLayout)
     }
+
 }

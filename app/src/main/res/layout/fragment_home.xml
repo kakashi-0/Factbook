@@ -6,33 +6,30 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp">
+        style="@style/layoutForFragments">
 
-        <TextView
-            android:id="@+id/FactCategory"
-            style="@style/HomeTextStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+        <Button
+            android:id="@+id/ShareButton"
+            style="@style/shareButton"
+            android:text="@string/share_button"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/NextButton" />
 
         <TextView
             android:id="@+id/Fact"
             style="@style/HomeTextStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="104dp"
+            android:layout_height="0dp"
             android:hint="@string/welcome_text"
+            android:gravity="center"
             android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/NextButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
 
         <Button
             android:id="@+id/NextButton"
@@ -47,22 +44,10 @@
             android:id="@+id/PreviousButton"
             style="@style/PreviousNextButton"
             android:text="@string/previous_button"
-            app:layout_constraintBottom_toTopOf="@+id/ShareButton"
+            app:layout_constraintBottom_toBottomOf="@+id/NextButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/NextButton"
-            app:layout_constraintTop_toBottomOf="@+id/Fact" />
-
-        <Button
-            android:id="@+id/ShareButton"
-            android:layout_width="231dp"
-            android:layout_height="68dp"
-            android:text="@string/share_button"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.521"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Fact"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toTopOf="@+id/NextButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
