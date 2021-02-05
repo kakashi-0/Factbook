@@ -5,7 +5,9 @@
             <item
                 android:id="@+id/carFactsFragment"
                 android:title="Cars" />
-            <item android:title="Solar System" />
+            <item
+                android:id="@+id/solarSystemFragment"
+                android:title="Solar System" />
         </menu>
     </item>
     <item android:title="Contact Us" />

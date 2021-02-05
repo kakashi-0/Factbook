@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_carFactsFragment"
             app:destination="@id/carFactsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_solarSystem"
+            app:destination="@id/solarSystemFragment" />
     </fragment>
     <fragment
         android:id="@+id/testFragment"
@@ -31,4 +34,8 @@
         android:name="com.gmail.kuldeepsinghchilwal.factbook.CarFactsFragment"
         android:label="Car Facts"
         tools:layout="@layout/fragment_facts_car" />
+    <fragment
+        android:id="@+id/solarSystemFragment"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.SolarSystem"
+        android:label="SolarSystem" />
 </navigation>
