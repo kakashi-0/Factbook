@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="Category" >
-        <menu >
+    <item android:title="@string/category_navmenu">
+        <menu>
             <item
                 android:id="@+id/carFactsFragment"
-                android:title="Cars" />
+                android:title="@string/car" />
             <item
                 android:id="@+id/solarSystemFragment"
-                android:title="Solar System" />
+                android:title="@string/solar_system" />
         </menu>
     </item>
-    <item android:title="Contact Us" />
-    <item android:title="@string/donate_menu_item_string"></item>
+    <item android:title="@string/rate_us_navmenu" />
+    <item android:title="@string/watch_ad_request"></item>
 </menu>
