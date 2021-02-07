@@ -3,8 +3,10 @@ package com.gmail.kuldeepsinghchilwal.factbook
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.ViewModelProviders.*
 import androidx.navigation.findNavController
@@ -17,12 +19,12 @@ class HomeFragment : Fragment() {
     private lateinit var viewModel: HomeFragmentViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+                              savedInstanceState: Bundle?): View {
 
         // Inflate the layout for this fragment
         val binding: FragmentHomeBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         //Creating and initializing view model
-        viewModel = ViewModelProviders.of(this).get(HomeFragmentViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(HomeFragmentViewModel::class.java)
         //To enable menu
         setHasOptionsMenu(true)
         //syncing resource id from HomeFragmentViewModel
@@ -31,19 +33,41 @@ class HomeFragment : Fragment() {
         if (resID != 0) {
             binding.Fact.setText(resID)
         }
+
         //next button on click listener
         binding.NextButton.setOnClickListener {
             resID = resources.getIdentifier(viewModel.randomIdGenerator(), "string", context?.packageName)
             //saving resource id for viewModel
             viewModel.resourceId = resID
+            //incrementing list index
+            viewModel.ind++
+            //adding the element created to mutable list
+            viewModel.resIdList.add(viewModel.ind,resID)
             //Displaying resource text
             binding.Fact.setText(resID)
         }
 
+        //setting onclick listener on previous button
+        binding.PreviousButton.setOnClickListener {
+            if (viewModel.ind >=2) {
+                //getting previous index then current one
+                viewModel.ind--
+                binding.Fact.setText(viewModel.resIdList[viewModel.ind])
+            }
+            else{
+                Toast.makeText(this.context, "No previous fact to display!", Toast.LENGTH_SHORT).show()
+            }
+        }
+
         //share button on click listener
         binding.ShareButton.setOnClickListener {
-            //declaring our intent action
-            startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, getString(resID)))
+            if (resID != 0) {
+                //declaring our intent action
+                startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, getString(viewModel.resIdList[viewModel.ind])))
+            }
+            else{
+                Toast.makeText(this.context,"No fact visible!", Toast.LENGTH_SHORT).show()
+            }
         }
 
         return binding.root

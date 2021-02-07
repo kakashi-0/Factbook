@@ -7,6 +7,10 @@ import kotlin.random.Random
 class SolarSystemViewModel : ViewModel() {
     //generating new resource id from idGenerator method
     var solarSystemResourceId = 0
+    //creating mutable list to store and retrieve resource ids in same order as these are created. We are not storing anything on index 0
+    val resIdList = mutableListOf<Int>()
+    //index number for resIdList mutable list
+    var ind=0
 
     init {
         Log.i("solarSystemFactViewModel","View Model Created.")
