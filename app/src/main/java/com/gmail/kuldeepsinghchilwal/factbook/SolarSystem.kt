@@ -11,10 +11,14 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.gmail.kuldeepsinghchilwal.factbook.databinding.FragmentSolarSystemBinding
+import java.lang.Boolean.FALSE
+import java.lang.Boolean.TRUE
 
 class SolarSystem : Fragment() {
     private lateinit var binding: FragmentSolarSystemBinding
     private lateinit var viewModel: SolarSystemViewModel
+    //numbers used to determine which fact to fetch. Ex. we have R.string.solarsystem1, R.string.solarsystem2 etc. So we determine the last digit using this list
+    private  val numberOfFacts = listOf<Int>(1,2,3,4,5,6,7,8,9,10)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
@@ -33,9 +37,8 @@ class SolarSystem : Fragment() {
 
         //if its it's initial oncreate it'll generate new resource to be displayed at welcome screen
         else {
-            viewModel.solarSystemResourceId = resources.getIdentifier(viewModel.randomSolarSystemIdGenerator(), "string", context?.packageName)
-            //adding first created resource in 0th index
-            viewModel.resIdList.add(viewModel.ind,viewModel.solarSystemResourceId)
+            viewModel.shuffledList = numberOfFacts.shuffled()
+            viewModel.solarSystemResourceId = resources.getIdentifier(solarSystemIdGenerator(TRUE), "string", context?.packageName)
             binding.solarSysTextview.setText(getText(viewModel.solarSystemResourceId))
         }
         return binding.root
@@ -44,39 +47,56 @@ class SolarSystem : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         //setting resource id variable that will be used to store generated ids for sharing fact
-        var solarSystemResId: Int
+        var solarSystemResId = 0
 
         //setting onclick listener for  next buton
         binding.solarSysNext.setOnClickListener {
-            solarSystemResId = resources.getIdentifier(viewModel.randomSolarSystemIdGenerator(),"string",context?.packageName)
+            solarSystemResId = resources.getIdentifier(solarSystemIdGenerator(TRUE),"string",context?.packageName)
             //saving resource id for viewModel
-            viewModel.solarSystemResourceId = solarSystemResId
-            Log.i("solar system","index = ${viewModel.ind}")
-            //incrementing list index
-            viewModel.ind++
-            //adding the element created to mutable list
-            viewModel.resIdList.add(viewModel.ind,solarSystemResId)
             viewModel.solarSystemResourceId = solarSystemResId
             binding.solarSysTextview.text = getText(solarSystemResId)
         }
 
         //setting onclick listener on previous button
         binding.solarSysPrevious.setOnClickListener {
-            if (viewModel.ind >=1 ) {
+            if (viewModel.shuffleInd >= 1 ) {
                 //getting previous index then current one
-                viewModel.ind--
-                binding.solarSysTextview.setText(viewModel.resIdList[viewModel.ind])
+                viewModel.shuffleInd--
+                Log.i("car previous","shuffle Ind = ${viewModel.shuffleInd}")
+                solarSystemResId = resources.getIdentifier(solarSystemIdGenerator(FALSE),"string",context?.packageName)
+                binding.solarSysTextview.setText(solarSystemResId)
             }
 
-            else{
+            else
+            {
                 Toast.makeText(this.context, "No previous fact to display!", Toast.LENGTH_SHORT).show()
             }
         }
 
         //setting onclick listener for send button
         binding.solarSysShare.setOnClickListener {
-            startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT,getString(viewModel.resIdList[viewModel.ind])))
+            startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT,getString(solarSystemResId)))
         }
     }
+    /**
+     * This function is used to generate ids to fetch facts from string file
+     *
+     * @property incrementInd true or false depending on whether we want to  increment the shuffle index
+     */
+    fun solarSystemIdGenerator (incrementInd: Boolean): String {
+        val factInCategory = viewModel.shuffledList[viewModel.shuffleInd]
 
+        //if its the last id
+        if (viewModel.shuffleInd==9 ){
+            Toast.makeText(this.context, "CONGRATULATIONS! you have read all facts in our data!", Toast.LENGTH_SHORT).show()
+        }
+        //incrementing shuffle index when its 1 lower than last id and incremenentInd is true
+        if (viewModel.shuffleInd <=8 && incrementInd) {
+            viewModel.shuffleInd++
+            Log.i("solar sys fact id generator", "shuffled list ${viewModel.shuffleInd}")
+
+        }
+        //returning int type resource id
+        return "solarsystem$factInCategory"
+    }
 }
