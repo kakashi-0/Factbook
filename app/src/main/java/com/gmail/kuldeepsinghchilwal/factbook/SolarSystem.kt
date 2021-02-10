@@ -38,7 +38,7 @@ class SolarSystem : Fragment() {
         //if its it's initial oncreate it'll generate new resource to be displayed at welcome screen
         else {
             viewModel.shuffledList = numberOfFacts.shuffled()
-            viewModel.solarSystemResourceId = resources.getIdentifier(solarSystemIdGenerator(TRUE), "string", context?.packageName)
+            viewModel.solarSystemResourceId = resources.getIdentifier(solarSystemIdGenerator(), "string", context?.packageName)
             binding.solarSysTextview.setText(getText(viewModel.solarSystemResourceId))
         }
         return binding.root
@@ -51,7 +51,13 @@ class SolarSystem : Fragment() {
 
         //setting onclick listener for  next buton
         binding.solarSysNext.setOnClickListener {
-            solarSystemResId = resources.getIdentifier(solarSystemIdGenerator(TRUE),"string",context?.packageName)
+            //incrementing shuffle index when its 1 lower than last id and incremenentInd is true
+            if (viewModel.shuffleInd <=8 ) {
+                viewModel.shuffleInd++
+                Log.i("solar sys fact id generator", "shuffled list ${viewModel.shuffleInd}")
+
+            }
+            solarSystemResId = resources.getIdentifier(solarSystemIdGenerator(),"string",context?.packageName)
             //saving resource id for viewModel
             viewModel.solarSystemResourceId = solarSystemResId
             binding.solarSysTextview.text = getText(solarSystemResId)
@@ -62,8 +68,8 @@ class SolarSystem : Fragment() {
             if (viewModel.shuffleInd >= 1 ) {
                 //getting previous index then current one
                 viewModel.shuffleInd--
-                Log.i("car previous","shuffle Ind = ${viewModel.shuffleInd}")
-                solarSystemResId = resources.getIdentifier(solarSystemIdGenerator(FALSE),"string",context?.packageName)
+                Log.i("solar previous","shuffle Ind = ${viewModel.shuffleInd}")
+                solarSystemResId = resources.getIdentifier(solarSystemIdGenerator(),"string",context?.packageName)
                 binding.solarSysTextview.setText(solarSystemResId)
             }
 
@@ -80,22 +86,15 @@ class SolarSystem : Fragment() {
     }
     /**
      * This function is used to generate ids to fetch facts from string file
-     *
-     * @property incrementInd true or false depending on whether we want to  increment the shuffle index
      */
-    fun solarSystemIdGenerator (incrementInd: Boolean): String {
+    fun solarSystemIdGenerator (): String {
         val factInCategory = viewModel.shuffledList[viewModel.shuffleInd]
 
         //if its the last id
         if (viewModel.shuffleInd==9 ){
             Toast.makeText(this.context, "CONGRATULATIONS! you have read all facts in our data!", Toast.LENGTH_SHORT).show()
         }
-        //incrementing shuffle index when its 1 lower than last id and incremenentInd is true
-        if (viewModel.shuffleInd <=8 && incrementInd) {
-            viewModel.shuffleInd++
-            Log.i("solar sys fact id generator", "shuffled list ${viewModel.shuffleInd}")
 
-        }
         //returning int type resource id
         return "solarsystem$factInCategory"
     }

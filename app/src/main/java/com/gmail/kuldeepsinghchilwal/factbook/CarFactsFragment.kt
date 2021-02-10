@@ -37,13 +37,19 @@ class CarFactsFragment : Fragment() {
         else {
 //shuffling the list
             viewModel.shuffledList = numberOfFacts.shuffled()
-            carResID = resources.getIdentifier(carIdGenerator(TRUE), "string", context?.packageName)
+            carResID = resources.getIdentifier(carIdGenerator(), "string", context?.packageName)
             dataBindingUtil.carFactTextview.setText(carResID)
 
         }
         //setting onClick listener on next button
         dataBindingUtil.carNext.setOnClickListener {
-            carResID = resources.getIdentifier(carIdGenerator(TRUE), "string", context?.packageName)
+            //incrementing shuffle index when its 1 lower than last id and incremenentInd is true
+            if (viewModel.shuffleInd <=8 ) {
+                viewModel.shuffleInd++
+                Log.i("car fact id generator", "shuffled list ${viewModel.shuffleInd}")
+
+            }
+            carResID = resources.getIdentifier(carIdGenerator(), "string", context?.packageName)
             dataBindingUtil.carFactTextview.setText(carResID)
             Log.i("car next finished","shuffle Ind = ${viewModel.shuffleInd}")
         }
@@ -54,7 +60,7 @@ class CarFactsFragment : Fragment() {
                 //getting previous index then current one
                 viewModel.shuffleInd--
                 Log.i("car previous","shuffle Ind = ${viewModel.shuffleInd}")
-                carResID = resources.getIdentifier(carIdGenerator(FALSE),"string",context?.packageName)
+                carResID = resources.getIdentifier(carIdGenerator(),"string",context?.packageName)
                 dataBindingUtil.carFactTextview.setText(carResID)
             }
 
@@ -73,22 +79,14 @@ class CarFactsFragment : Fragment() {
 
     /**
      * This function is used to generate ids to fetch facts from string file
-     *
-     * @property incrementInd true or false depending on whether we want to  increment the shuffle index
      */
-    fun carIdGenerator (incrementInd: Boolean): String {
+    fun carIdGenerator ( ): String {
             // generating random number to get random facts . like car1,car2 etc
             val factInCategory = viewModel.shuffledList[viewModel.shuffleInd]
 
         //if its the last id
         if (viewModel.shuffleInd==9 ){
             Toast.makeText(this.context, "CONGRATULATIONS! you have read all facts in our data!", Toast.LENGTH_SHORT).show()
-        }
-        //incrementing shuffle index when its 1 lower than last id and incremenentInd is true
-        if (viewModel.shuffleInd <=8 && incrementInd) {
-            viewModel.shuffleInd++
-            Log.i("car fact id generator", "shuffled list ${viewModel.shuffleInd}")
-
         }
             //returning int type resource id
             return "car$factInCategory"
