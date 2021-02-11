@@ -8,6 +8,15 @@
             <item
                 android:id="@+id/solarSystemFragment"
                 android:title="@string/solar_system" />
+            <item
+                android:id="@+id/smartphoneFragment"
+                android:title="@string/smartphone" />
+            <item
+                android:id="@+id/humanFragment"
+                android:title="@string/human" />
+            <item
+                android:id="@+id/dogFragment"
+                android:title="@string/dog" />
         </menu>
     </item>
     <item android:title="@string/rate_us_navmenu" />

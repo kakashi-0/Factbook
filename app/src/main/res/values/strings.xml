@@ -46,4 +46,44 @@
     <string name="solarsystem9"> Neptune experiences wind speeds as fast as 1,600mph!</string>
     <string name="solarsystem10">You can grow as much as 5cm taller in space compared to on Earth.</string>
 
+    <!-- Facts about smartphone-->
+    <string name="smartphone1">The best-selling mobile phone is the Nokia 1100</string>
+    <string name="smartphone2">In Ads, iPhones are Always Set to 9:41</string>
+    <string name="smartphone3">The term Bluetooth comes from a Nordic king</string>
+    <string name="smartphone4">There is a mobile phone out in space</string>
+    <string name="smartphone5">Android Represents More Than 80% of the OS Market</string>
+    <string name="smartphone6">The first call from a mobile phone was made on April 3, 1973</string>
+    <string name="smartphone7">There is an addiction to mobile phones and it’s called nomophobia</string>
+    <string name="smartphone8">We check our mobile phone about 150 times a day on average</string>
+    <string name="smartphone9">There are already more mobile phones than people in our world</string>
+    <string name="smartphone10">Mobile phones contain many more bacteria than a toilet flush</string>
+
+    <!-- Facts about Human Beings-->
+    <string name="human1">An average person breathes in around 11,000 litres of air every day.</string>
+    <string name="human2">Your nose and ears continue growing throughout your entire life.</string>
+    <string name="human3">Your sense of smell is around 10,000 times more sensitive than your sense of taste.</string>
+    <string name="human4">The brain uses over a quarter of the oxygen used by the human body.</string>
+    <string name="human5">The brain of an adult human weighs around 3 pounds (1.5 kg). Although it makes up just 2 per cent of the body’s weight, it uses around 20 per cent of its energy.</string>
+    <string name="human6">When listening to music, your heartbeat will sync with the rhythm.</string>
+    <string name="human7">In one year, a human heart would pump enough blood to fill an Olympic size pool.</string>
+    <string name="human8">A large amount of the dust in your home is actually dead skin. Humans shed about 600,000 particles of skin every hour.</string>
+    <string name="human9"> As well as having unique fingerprints, humans also have unique tongue prints.</string>
+    <string name="human10">The cornea is the only part of the body with no blood supply – it gets its oxygen directly from the air.</string>
+
+    <!--Facts about Dogs-->
+    <string name="dog1"> Three dogs survived the Titanic sinking</string>
+    <string name="dog2">A Bloodhound’s sense of smell can be used as evidence in court</string>
+    <string name="dog3">Basenji dogs don’t bark, they yodel</string>
+    <string name="dog4">A Greyhound could beat a Cheetah in a long distance race</string>
+    <string name="dog5">30% of Dalmatians are deaf in one ear</string>
+    <string name="dog6">The Saluki is the oldest dog breed</string>
+    <string name="dog7">Dogs have three eyelids</string>
+    <string name="dog8">Dogs noses are wet to help absorb scent chemicals</string>
+    <string name="dog9">Stray dogs in Russia have learned how to ride the complex subway system, and get off at specific stops in search of food.</string>
+    <string name="dog10">Your dog can smell your feelings.They can in fact, smell things such as fear. When a human is fearful, they perspire, and a dog is easily able to pick up on this change.</string>
+    <string name="smartphone">Smartphone</string>
+    <string name="human">Human</string>
+    <string name="dog">Dog</string>
+
+
 </resources>

@@ -9,14 +9,7 @@
         android:id="@+id/homeFragment"
         android:label="Random Facts"
         android:name="com.gmail.kuldeepsinghchilwal.factbook.HomeFragment"
-        tools:layout="@layout/fragment_home">
-        <action
-            android:id="@+id/action_homeFragment_to_carFactsFragment"
-            app:destination="@id/carFactsFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_solarSystem"
-            app:destination="@id/solarSystemFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_home"/>
     <fragment
         android:id="@+id/testFragment"
         android:name="com.gmail.kuldeepsinghchilwal.factbook.TestFragment"
@@ -38,4 +31,16 @@
         android:id="@+id/solarSystemFragment"
         android:name="com.gmail.kuldeepsinghchilwal.factbook.SolarSystem"
         android:label="SolarSystem" />
+    <fragment
+        android:id="@+id/smartphoneFragment"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.Smartphone"
+        android:label="Smartphone" />
+    <fragment
+        android:id="@+id/humanFragment"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.Human"
+        android:label="Human" />
+    <fragment
+        android:id="@+id/dogFragment"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.Dog"
+        android:label="Dog" />
 </navigation>
