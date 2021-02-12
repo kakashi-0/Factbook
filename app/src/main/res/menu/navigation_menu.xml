@@ -6,34 +6,33 @@
                 android:id="@+id/carFactsFragment"
                 android:title="@string/car" />
             <item
-                android:id="@+id/solarSystemFragment"
-                android:title="@string/solar_system" />
-            <item
-                android:id="@+id/smartphoneFragment"
-                android:title="@string/smartphone" />
-            <item
-                android:id="@+id/humanFragment"
-                android:title="@string/human" />
+                android:id="@+id/catFragment"
+                android:title="@string/cat" />
             <item
                 android:id="@+id/dogFragment"
                 android:title="@string/dog" />
             <item
-                android:id="@+id/spaceExplorationFragment"
-                android:title="@string/spaceExplore" />
-            <item
-                android:id="@+id/catFragment"
-                android:title="@string/cat" />
+                android:id="@+id/humanFragment"
+                android:title="@string/human" />
             <item
                 android:id="@+id/insectsFragment"
                 android:title="@string/insect" />
             <item
+                android:id="@+id/motorcycleFragment"
+                android:title="@string/motorcycle" />
+            <item
                 android:id="@+id/shoesFragment"
                 android:title="@string/shoes" />
             <item
-                android:id="@+id/motorcycleFragment"
-                android:title="@string/motorcycle" />
-
-        </menu>
+                android:id="@+id/smartphoneFragment"
+                android:title="@string/smartphone" />
+            <item
+                android:id="@+id/solarSystemFragment"
+                android:title="@string/solar_system" />
+            <item
+                android:id="@+id/spaceExplorationFragment"
+                android:title="@string/spaceExplore" />
+            </menu>
     </item>
     <item android:title="@string/rate_us_navmenu" />
     <item android:title="@string/watch_ad_request"></item>
