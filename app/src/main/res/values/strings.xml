@@ -21,8 +21,17 @@
     <string name="about">About</string>
     <string name="about_author_menu_item_string">About Author</string>
     <string name="donate_menu_item_string">Donate </string>
+    <string name="smartphone">Smartphone</string>
+    <string name="human">Human</string>
+    <string name="dog">Dog</string>
+    <string name="spaceExplore">Space Exploration</string>
+    <string name="cat">Cat</string>
+    <string name="insect">Insects</string>
+    <string name="shoes">Shoes</string>
+    <string name="motorcycle">Motorcycle</string>
 
-    <!--Facts about automobile-->
+
+    <!--Facts about cars-->
     <string name="car1">The average fuel cost across all vehicles is 14.45 cents per mile, or about 23 miles per gallon.</string>
     <string name="car2">The best selling car of all-time is the Toyota Corolla.</string>
     <string name="car3">It would take less than a month to get to the moon by car</string>
@@ -81,9 +90,67 @@
     <string name="dog8">Dogs noses are wet to help absorb scent chemicals</string>
     <string name="dog9">Stray dogs in Russia have learned how to ride the complex subway system, and get off at specific stops in search of food.</string>
     <string name="dog10">Your dog can smell your feelings.They can in fact, smell things such as fear. When a human is fearful, they perspire, and a dog is easily able to pick up on this change.</string>
-    <string name="smartphone">Smartphone</string>
-    <string name="human">Human</string>
-    <string name="dog">Dog</string>
+
+
+    <!--Facts about space exploration-->
+    <string name="spaceExplore1">Total cost of the Apollo 11 mission that first put a man on the moon was $25.4 billion. In today’s money, that’s around $135 billion.</string>
+    <string name="spaceExplore2">Space pens were developed by a private pen company, that spent around $1 million developing a pen that would work in a vacuum, with zero gravity, while undergoing extremes of temperature, before selling 400 of them to the space agency at $2.95 each.</string>
+    <string name="spaceExplore3">In 2013, a Russian cosmonaut called Pavel Vinogradov was the first human to pay his income taxes from space.</string>
+    <string name="spaceExplore4">Various astronauts who have been on missions there claim that the moon smells of wet ashes, or spent gunpowder.</string>
+    <string name="spaceExplore5">Snoopy, from the Peanuts comics, is the astronauts\' personal safety mascot.</string>
+    <string name="spaceExplore6">Explorer 1, launched on Jan. 31, 1958, was the first artificial satellite sent into space by the United States. It orbited Earth every 115 minutes, and its cargo included a cosmic ray detector designed to measure the radiation environment in Earth\'s orbit.</string>
+    <string name="spaceExplore7"> Each space shuttle astronaut is allotted 3.8 pounds of food per day.</string>
+    <string name="spaceExplore8">It takes six hours for a space shuttle, aboard a crawler-transporter, to make the trip from the vehicle assembly building to the launch pad preceding a mission.</string>
+    <string name="spaceExplore9"> A manned rocket reaches the moon in less time than it took a stagecoach to travel the length of England.</string>
+    <string name="spaceExplore10">There is no set number of people in an astronaut candidate class; NASA selects its candidates on an as-needed basis. To even apply to be an astronaut, candidates must have completed 1,000 hours of flying time in a jet aircraft.</string>
+
+    <!--Facts about cats-->
+    <string name="cat1">Cats are believed to be the only mammals who don’t taste sweetness.</string>
+    <string name="cat2">Cats are nearsighted, but their peripheral vision and night vision are much better than that of humans.</string>
+    <string name="cat3">Cats are supposed to have 18 toes (five toes on each front paw; four toes on each back paw).</string>
+    <string name="cat4">Cats’ claws all curve downward, which means that they can’t climb down trees head-first. Instead, they have to back down the trunk.</string>
+    <string name="cat5">Cats have an extra organ that allows them to taste scents on the air, which is why your cat stares at you with her mouth open from time to time.</string>
+    <string name="cat6">Cats have whiskers on the backs of their front legs, as well.</string>
+    <string name="cat7">Male cats are more likely to be left-pawed, while female cats are more likely to be right-pawed.</string>
+    <string name="cat8">Cats live longer when they stay indoors.</string>
+    <string name="cat9">Cats will refuse an unpalatable food to the point of starvation.</string>
+    <string name="cat10">Despite popular belief, many cats are actually lactose intolerant.</string>
+
+    <!--Facts about Insects-->
+    <string name="insect1"> A ladybird might eat more than 5,000 insects in its lifetime!</string>
+    <string name="insect2">Dragonflies have been on earth for 300 million years!</string>
+    <string name="insect3"> A bee’s wings beat 190 times a second, that’s 11,400 times a minute.</string>
+    <string name="insect4">Caterpillars have 12 eyes!</string>
+    <string name="insect5">One dung beetle can drag 1,141 times its weight – that’s like a human pulling six double-decker buses!</string>
+    <string name="insect6">A single honeybee colony can produce around 100kg of honey each year – that’s 220 jars</string>
+    <string name="insect7">Bulldog ants can leap seven times the length of their bodies!</string>
+    <string name="insect8">Mosquitos are attracted to smelly feet!</string>
+    <string name="insect9"> Butterflies taste with their feet.</string>
+    <string name="insect10"> Grasshoppers existed before dinosaurs!</string>
+
+    <!--Facts about shoes-->
+    <string name="shoes1">Men were the first people to wear hee</string>
+    <string name="shoes2">Platform shoes used to be worn by Greek actors to signify status.</string>
+    <string name="shoes3">Sneakers got their name because their rubber soles do not make noise.</string>
+    <string name="shoes4">Your salary might determine the type of shoes you wear to work.</string>
+    <string name="shoes5">Audrey Hepburn could be credited with bringing loafers into style.</string>
+    <string name="shoes6">Dr. Martens were originally considered practical working men\'s boots for their air-cushioned soles.</string>
+    <string name="shoes7">Salvatore Ferragamo invented the wedge shoe when Italy was suffering from closed trade with other countries.</string>
+    <string name="shoes8"> Havaianas are inspired by Japanese sandals.</string>
+    <string name="shoes9">Even though hardly any photos of him exist on the Internet, Jeffrey Campbell is a real person.</string>
+    <string name="shoes10">The red sole on Louboutins are inspired by an Andy Warhol drawing.</string>
+
+    <!--Facts about Motorcycles-->
+    <string name="motorcycle1">The term "motorcycle" (or "motorrad" in German) was first used in 1894 by Hildebrand &amp; Wolfmüller.</string>
+    <string name="motorcycle2">The longest distance a man rode a motorcycle in 24 hours was 3,256.5 km (2023.5 miles).</string>
+    <string name="motorcycle3">Japan once built a motorcycle that was indirectly powered by human waste. Its name is the Toilet Bike Neo, and its creator is high-end toilet manufacturer Toto</string>
+    <string name="motorcycle4">The first-ever Harley-Davidson motorcycle only went 25 mph (40 kph). It also had a single-cylinder engine that initially used an empty tomato can for its carburetor.</string>
+    <string name="motorcycle5">Sixty-eight percent of the female motorcyclists who died in crashes in 2016 were passengers, and their deaths represented 92 percent of the passenger deaths.</string>
+    <string name="motorcycle6">Suzuki originally began making weaving looms for Japan’s silk industry in the early part of the 1900s.</string>
+    <string name="motorcycle7">Dodge built and sold nine motorcycles with a Viper V-10 engine called the Dodge Tomahawk. </string>
+    <string name="motorcycle8">Modern sports bike tires don’t contain any actual rubber in them.</string>
+    <string name="motorcycle9">The longest distance for riding a motorcycle was 2,019.4 miles in a 24 hour period.</string>
+    <string name="motorcycle10">The first gas-powered motorcycle was invented by Gottlieb Daimler of Germany in 1885.</string>
 
 
 </resources>

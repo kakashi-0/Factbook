@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".InsectsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/layoutForFragments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/insectsTextview"
+            style="@style/layoutForFragments"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/insectsNext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <Button
+            android:id="@+id/insectsPrevious"
+            style="@style/PreviousNextButton"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="@string/previous_button"
+            app:layout_constraintBottom_toBottomOf="@+id/insectsNext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/insectsNext"
+            app:layout_constraintTop_toTopOf="@+id/insectsNext"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/insectsNext"
+            style="@style/PreviousNextButton"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="@string/next_button"
+            app:layout_constraintBottom_toTopOf="@+id/insectsShare"
+            app:layout_constraintEnd_toStartOf="@+id/insectsPrevious"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insectsTextview" />
+
+        <Button
+            android:id="@+id/insectsShare"
+            style="@style/shareButton"
+            android:layout_width="231dp"
+            android:layout_height="68dp"
+            android:text="@string/share_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insectsNext" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

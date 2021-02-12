@@ -24,23 +24,44 @@
         android:name="com.gmail.kuldeepsinghchilwal.factbook.DonateFragment" />
     <fragment
         android:id="@+id/carFactsFragment"
-        android:name="com.gmail.kuldeepsinghchilwal.factbook.CarFactsFragment"
-        android:label="Car Facts"
-        tools:layout="@layout/fragment_facts_car" />
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.Car"
+        android:label="@string/car"
+        tools:layout="@layout/fragment_car" />
     <fragment
         android:id="@+id/solarSystemFragment"
         android:name="com.gmail.kuldeepsinghchilwal.factbook.SolarSystem"
-        android:label="SolarSystem" />
+        android:label="@string/solar_system" />
     <fragment
         android:id="@+id/smartphoneFragment"
         android:name="com.gmail.kuldeepsinghchilwal.factbook.Smartphone"
-        android:label="Smartphone" />
+        android:label="@string/smartphone" />
     <fragment
         android:id="@+id/humanFragment"
         android:name="com.gmail.kuldeepsinghchilwal.factbook.Human"
-        android:label="Human" />
+        android:label="@string/human" />
     <fragment
         android:id="@+id/dogFragment"
         android:name="com.gmail.kuldeepsinghchilwal.factbook.Dog"
-        android:label="Dog" />
+        android:label="@string/dog" />
+    <fragment
+        android:id="@+id/insectsFragment"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.Insects"
+        android:label="@string/insect" />
+    <fragment
+        android:id="@+id/motorcycleFragment"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.Motorcycle"
+        android:label="@string/motorcycle" />
+
+    <fragment
+        android:id="@+id/shoesFragment"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.Shoes"
+        android:label="@string/shoes" />
+    <fragment
+        android:id="@+id/spaceExplorationFragment"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.SpaceExploration"
+        android:label="@string/spaceExplore" />
+    <fragment
+        android:id="@+id/catFragment"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.Cat"
+        android:label="@string/cat" />
 </navigation>

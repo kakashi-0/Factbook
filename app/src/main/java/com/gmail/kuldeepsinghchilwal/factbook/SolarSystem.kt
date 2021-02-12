@@ -11,35 +11,31 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.gmail.kuldeepsinghchilwal.factbook.databinding.FragmentSolarSystemBinding
-import java.lang.Boolean.FALSE
-import java.lang.Boolean.TRUE
 
 class SolarSystem : Fragment() {
     private lateinit var binding: FragmentSolarSystemBinding
-    private lateinit var viewModel: SolarSystemViewModel
+    private lateinit var viewModel: FragmentViewModel
     //numbers used to determine which fact to fetch. Ex. we have R.string.solarsystem1, R.string.solarsystem2 etc. So we determine the last digit using this list
     private  val numberOfFacts = listOf<Int>(1,2,3,4,5,6,7,8,9,10)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
-        Log.i("solar system oncreate", "oncreate called")
         //initializing viewModel
-        viewModel = ViewModelProvider(this).get(SolarSystemViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(FragmentViewModel::class.java)
         // initializing property binding
         binding  = DataBindingUtil.inflate(inflater,R.layout.fragment_solar_system,container,false)
 
         // if view is being recreated due to rotation if device or other factor. So that viewmodel is holding the
         // older data for resource id being displayed
-        if (viewModel.solarSystemResourceId != 0){
-           // Log.i("solar system.kt","solarsystemresid $solarSystemResId")
-            binding.solarSysTextview.setText(getText(viewModel.solarSystemResourceId))
+        if (viewModel.resourceId != 0){
+            binding.solarSysTextview.setText(getText(viewModel.resourceId))
         }
 
         //if its it's initial oncreate it'll generate new resource to be displayed at welcome screen
         else {
             viewModel.shuffledList = numberOfFacts.shuffled()
-            viewModel.solarSystemResourceId = resources.getIdentifier(solarSystemIdGenerator(), "string", context?.packageName)
-            binding.solarSysTextview.setText(getText(viewModel.solarSystemResourceId))
+            viewModel.resourceId = resources.getIdentifier(solarSystemIdGenerator(), "string", context?.packageName)
+            binding.solarSysTextview.setText(getText(viewModel.resourceId))
         }
         return binding.root
     }
@@ -51,15 +47,17 @@ class SolarSystem : Fragment() {
 
         //setting onclick listener for  next buton
         binding.solarSysNext.setOnClickListener {
-            //incrementing shuffle index when its 1 lower than last id and incremenentInd is true
             if (viewModel.shuffleInd <=8 ) {
                 viewModel.shuffleInd++
-                Log.i("solar sys fact id generator", "shuffled list ${viewModel.shuffleInd}")
-
+                solarSystemResId = resources.getIdentifier(solarSystemIdGenerator(),"string",context?.packageName)
+                //saving resource id for viewModel
+                viewModel.resourceId = solarSystemResId
             }
-            solarSystemResId = resources.getIdentifier(solarSystemIdGenerator(),"string",context?.packageName)
-            //saving resource id for viewModel
-            viewModel.solarSystemResourceId = solarSystemResId
+            //if its the last id
+            if (viewModel.shuffleInd==9 ){
+                Toast.makeText(this.context, "CONGRATULATIONS! you have read all facts in our data!", Toast.LENGTH_SHORT).show()
+            }
+
             binding.solarSysTextview.text = getText(solarSystemResId)
         }
 
@@ -68,7 +66,6 @@ class SolarSystem : Fragment() {
             if (viewModel.shuffleInd >= 1 ) {
                 //getting previous index then current one
                 viewModel.shuffleInd--
-                Log.i("solar previous","shuffle Ind = ${viewModel.shuffleInd}")
                 solarSystemResId = resources.getIdentifier(solarSystemIdGenerator(),"string",context?.packageName)
                 binding.solarSysTextview.setText(solarSystemResId)
             }
@@ -87,13 +84,8 @@ class SolarSystem : Fragment() {
     /**
      * This function is used to generate ids to fetch facts from string file
      */
-    fun solarSystemIdGenerator (): String {
+    private fun solarSystemIdGenerator (): String {
         val factInCategory = viewModel.shuffledList[viewModel.shuffleInd]
-
-        //if its the last id
-        if (viewModel.shuffleInd==9 ){
-            Toast.makeText(this.context, "CONGRATULATIONS! you have read all facts in our data!", Toast.LENGTH_SHORT).show()
-        }
 
         //returning int type resource id
         return "solarsystem$factInCategory"
