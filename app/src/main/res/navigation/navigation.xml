@@ -64,4 +64,9 @@
         android:id="@+id/catFragment"
         android:name="com.gmail.kuldeepsinghchilwal.factbook.Cat"
         android:label="@string/cat" />
+    <activity
+        android:id="@+id/interstitialAd"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.InterstitialAd"
+        tools:layout="@layout/activity_interstitial_ad" />
+
 </navigation>

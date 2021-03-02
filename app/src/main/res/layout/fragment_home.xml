@@ -33,21 +33,31 @@
 
         <Button
             android:id="@+id/NextButton"
-            style="@style/PreviousNextButton"
             android:text="@string/next_button"
             app:layout_constraintBottom_toTopOf="@+id/ShareButton"
             app:layout_constraintEnd_toStartOf="@+id/PreviousButton"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Fact" />
+            app:layout_constraintTop_toBottomOf="@+id/Fact"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_margin="4dp" />
 
         <Button
             android:id="@+id/PreviousButton"
-            style="@style/PreviousNextButton"
             android:text="@string/previous_button"
             app:layout_constraintBottom_toBottomOf="@+id/NextButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/NextButton"
-            app:layout_constraintTop_toTopOf="@+id/NextButton" />
+            app:layout_constraintTop_toTopOf="@+id/NextButton"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_margin="4dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

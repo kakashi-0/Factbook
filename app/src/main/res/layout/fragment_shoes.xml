@@ -30,8 +30,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/shoesNext"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/shoesNext"
-            app:layout_constraintTop_toTopOf="@+id/shoesNext"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toTopOf="@+id/shoesNext" />
 
         <Button
             android:id="@+id/shoesNext"

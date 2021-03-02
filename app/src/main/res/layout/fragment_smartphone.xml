@@ -30,8 +30,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/smartphoneNext"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/smartphoneNext"
-            app:layout_constraintTop_toTopOf="@+id/smartphoneNext"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toTopOf="@+id/smartphoneNext" />
 
         <Button
             android:id="@+id/smartphoneNext"

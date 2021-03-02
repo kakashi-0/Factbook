@@ -30,8 +30,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/carNext"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/carNext"
-            app:layout_constraintTop_toTopOf="@+id/carNext"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toTopOf="@+id/carNext" />
 
         <Button
             android:id="@+id/carNext"
