@@ -20,12 +20,13 @@ class HomeFragmentViewModel : ViewModel() {
 
 
     fun randomIdGenerator (): String {
-            val categoryArray = arrayOf<String>("car", "solarsystem")
+            val categoryArray = arrayOf<String>("car", "solarsystem","cat","dog","smartphone",
+            "human","insect","spaceExplore","shoes","motorcycle")
             val randomCategoryArrayIndex = Random.nextInt(2)
             //getting random categories
             category  = categoryArray[randomCategoryArrayIndex]
         // generating random number to get random facts . like car1,car2 etc
-        val factInCategory = Random.nextInt(1, 11)
+        val factInCategory = Random.nextInt(1, 21)
         //returning int type resource id
         return category+factInCategory
     }

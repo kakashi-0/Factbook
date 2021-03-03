@@ -17,7 +17,7 @@ class Smartphone : Fragment() {
     private lateinit var viewModel: FragmentViewModel
 
     //numbers used to determine which fact to fetch. Ex. we have R.string.smartphone1, R.string.smartphone2 etc. So we determine the last digit using this list
-    private val numberOfFacts = listOf<Int>(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    private val numberOfFacts = listOf<Int>(1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,17,18,19,20)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
