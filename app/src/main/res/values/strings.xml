@@ -19,7 +19,7 @@
     <string name="donate_INR">DONATE IN INR</string>
     <string name="donate_USD">DONATE IN USD</string>
     <string name="about">About</string>
-    <string name="about_author_menu_item_string">About</string>
+    <string name="about_menu_item_string">About</string>
     <string name="donate_menu_item_string">Donate </string>
     <string name="smartphone">Smartphone</string>
     <string name="human">Human</string>
@@ -124,7 +124,7 @@
     <string name="human15">There’s a one in three chance that your first heart attack will be your last.</string>
     <string name="human16">A females heart is smaller than a males by about 25%.</string>
     <string name="human17">It’s not just your cheeks that turn red and expose your embarrassment when you’re blushing. Your stomach also turns red, but not many people will notice this.</string>
-    <string name="human18">Every 3-4 seconds, around 50,000 cells in your body will die and be replaced by new ones.</string>
+    <string name="human18">Every 3–4 seconds, around 50,000 cells in your body will die and be replaced by new ones.</string>
     <string name="human19">It’s scientifically proven that children grow faster in the spring.</string>
     <string name="human20">After a long day at work, you will be around 8mm shorter than you were in the morning.</string>
 
@@ -163,10 +163,10 @@
     <string name="spaceExplore9"> A manned rocket reaches the moon in less time than it took a stagecoach to travel the length of England.</string>
     <string name="spaceExplore10">There is no set number of people in an astronaut candidate class; NASA selects its candidates on an as-needed basis. To even apply to be an astronaut, candidates must have completed 1,000 hours of flying time in a jet aircraft.</string>
     <string name="spaceExplore11">There is one spacecraft currently orbiting Jupiter called Juno.</string>
-<string name="spaceExplore12">Footprints left on the Moon won’t disappear as there is no wind.</string>
+    <string name="spaceExplore12">Footprints left on the Moon won’t disappear as there is no wind.</string>
     <string name="spaceExplore13">A full NASA space suit costs $12,000,000.</string>
     <string name="spaceExplore14">On October 14, 1947, in the rocket powered Bell X-1, Capt. Charles E. Yeager flew faster than sound for the first time.</string>
-    <string name="spaceExplore15">NASA became operational on October 1, 1958 -- one year after the Soviets launched Sputnik 1, the world\'s first artificial satellite.</string>
+    <string name="spaceExplore15">NASA became operational on October 1, 1958 — one year after the Soviets launched Sputnik 1, the world\'s first artificial satellite.</string>
     <string name="spaceExplore16">The acronym "NASA" stands for National Aeronautics and Space Administration.</string>
     <string name="spaceExplore17">The Mercury, Gemini, and Apollo spacecraft landed in the Atlantic and Pacific Oceans when they returned to Earth.</string>
     <string name="spaceExplore18"> Astronaut Alan Shepard, the first American in space, to pee right inside his space suit.</string>

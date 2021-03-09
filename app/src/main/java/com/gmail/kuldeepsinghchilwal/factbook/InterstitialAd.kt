@@ -15,7 +15,7 @@ class InterstitialAd : AppCompatActivity() {
     lateinit var binding: ActivityInterstitialAdBinding
     //Ad
     private var mAdManagerInterstitialAd: AdManagerInterstitialAd? = null
-    private final var TAG = "Interstitial"
+    private var TAG = "Interstitial"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +30,7 @@ class InterstitialAd : AppCompatActivity() {
                 InterstitialAdRequest,
                 object : AdManagerInterstitialAdLoadCallback() {
                     override fun onAdFailedToLoad(adError: LoadAdError) {
-                        Log.d(TAG, adError?.message)
+                        Log.d(TAG, adError.message)
                         mAdManagerInterstitialAd = null
                     }
 
@@ -47,7 +47,7 @@ class InterstitialAd : AppCompatActivity() {
                 adRequest,
                 object : AdManagerInterstitialAdLoadCallback() {
                     override fun onAdFailedToLoad(adError: LoadAdError) {
-                        Log.d(TAG, adError?.message)
+                        Log.d(TAG, adError.message)
                         mAdManagerInterstitialAd = null
                     }
 
@@ -61,7 +61,7 @@ class InterstitialAd : AppCompatActivity() {
                         mAdManagerInterstitialAd?.show(this)
                     } else {
                         Log.d("TAG", "The interstitial ad wasn't ready yet.")
-                        Toast.makeText(this, "Loading Ad please wait ", Toast.LENGTH_SHORT).show()                    }
+                        Toast.makeText(this, "Loading Ad please visit after a minute ", Toast.LENGTH_SHORT).show()                    }
             mAdManagerInterstitialAd=null
             }
             }

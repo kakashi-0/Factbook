@@ -15,10 +15,6 @@
         android:name="com.gmail.kuldeepsinghchilwal.factbook.TestFragment"
         tools:layout="@layout/fragment_test" />
     <fragment
-        android:id="@+id/aboutAuthorFragment"
-        android:label="About Me"
-        android:name="com.gmail.kuldeepsinghchilwal.factbook.AboutFragment" />
-    <fragment
         android:id="@+id/donateFragment"
         android:label="Donate"
         android:name="com.gmail.kuldeepsinghchilwal.factbook.DonateFragment" />
@@ -68,5 +64,10 @@
         android:id="@+id/interstitialAd"
         android:name="com.gmail.kuldeepsinghchilwal.factbook.InterstitialAd"
         tools:layout="@layout/activity_interstitial_ad" />
+    <activity
+        android:id="@+id/about"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.About"
+        android:label="About"
+        tools:layout="@layout/activity_about" />
 
 </navigation>
