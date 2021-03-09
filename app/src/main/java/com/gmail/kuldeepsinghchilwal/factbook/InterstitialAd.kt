@@ -59,9 +59,10 @@ class InterstitialAd : AppCompatActivity() {
             binding.watchAD.setOnClickListener {
                     if (mAdManagerInterstitialAd != null) {
                         mAdManagerInterstitialAd?.show(this)
-                        Toast.makeText(this, "Showing Ad", Toast.LENGTH_SHORT).show()
                     } else {
                         Log.d("TAG", "The interstitial ad wasn't ready yet.")
-                        Toast.makeText(this, "Loading Ad please wait ", Toast.LENGTH_SHORT).show()                    } }
+                        Toast.makeText(this, "Loading Ad please wait ", Toast.LENGTH_SHORT).show()                    }
+            mAdManagerInterstitialAd=null
+            }
             }
     }

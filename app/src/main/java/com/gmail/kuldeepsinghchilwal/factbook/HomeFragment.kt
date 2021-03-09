@@ -63,7 +63,10 @@ class HomeFragment : Fragment() {
         binding.ShareButton.setOnClickListener {
             if (resID != 0) {
                 //declaring our intent action
-                startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, getString(viewModel.resIdList[viewModel.ind])))
+                startActivity(
+                    Intent(Intent.ACTION_SEND).setType("text/plain")
+                        .putExtra(Intent.EXTRA_TEXT, getString(viewModel.resIdList[viewModel.ind]))
+                )
             }
             else{
                 Toast.makeText(this.context,"No fact visible!", Toast.LENGTH_SHORT).show()

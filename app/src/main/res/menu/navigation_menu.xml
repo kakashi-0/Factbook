@@ -4,33 +4,43 @@
         <menu>
             <item
                 android:id="@+id/carFactsFragment"
+                android:icon="@drawable/ic_car"
                 android:title="@string/car" />
             <item
                 android:id="@+id/catFragment"
+                android:icon="@drawable/ic_cat"
                 android:title="@string/cat" />
             <item
                 android:id="@+id/dogFragment"
+                android:icon="@drawable/ic_dog"
                 android:title="@string/dog" />
             <item
                 android:id="@+id/humanFragment"
+                android:icon="@drawable/ic_human"
                 android:title="@string/human" />
             <item
                 android:id="@+id/insectsFragment"
+                android:icon="@drawable/ic_insects"
                 android:title="@string/insect" />
             <item
                 android:id="@+id/motorcycleFragment"
+                android:icon="@drawable/ic_motorcycle"
                 android:title="@string/motorcycle" />
             <item
                 android:id="@+id/shoesFragment"
+                android:icon="@drawable/ic_shoes"
                 android:title="@string/shoes" />
             <item
                 android:id="@+id/smartphoneFragment"
+                android:icon="@drawable/ic_smartphone"
                 android:title="@string/smartphone" />
             <item
                 android:id="@+id/solarSystemFragment"
+                android:icon="@drawable/ic_space"
                 android:title="@string/solar_system" />
             <item
                 android:id="@+id/spaceExplorationFragment"
+                android:icon="@drawable/ic_spacetravel"
                 android:title="@string/spaceExplore" />
             </menu>
     </item>

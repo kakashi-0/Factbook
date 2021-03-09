@@ -22,7 +22,7 @@ class HomeFragmentViewModel : ViewModel() {
     fun randomIdGenerator (): String {
             val categoryArray = arrayOf<String>("car", "solarsystem","cat","dog","smartphone",
             "human","insect","spaceExplore","shoes","motorcycle")
-            val randomCategoryArrayIndex = Random.nextInt(2)
+            val randomCategoryArrayIndex = Random.nextInt(10)
             //getting random categories
             category  = categoryArray[randomCategoryArrayIndex]
         // generating random number to get random facts . like car1,car2 etc

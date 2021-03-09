@@ -12,14 +12,14 @@
     <string name="car">Cars</string>
     <string name="category_navmenu">Category</string>
     <string name="rate_us_navmenu">Rate us</string>
-    <string name="placeholder_author">Kuldeep Chilwal</string>
-    <string name="about_author">Hi! I absolutely love to try new technologies and I love to engineer things. So, here I am making this app and trying to learn new technology. Hope you like this app and kindly check my other apps and donate using link in the app.</string>
+    <string name="author_name">By Kuldeep Chilwal</string>
+    <string name="about_text">Hi reader! I\'m an engineer by profession and Indian by heart. This app is a project I took to provide you with some cool facts about things we see everyday without the intrusive full screen ads! Hope you are enjoying it! This is just a beginning, stay with me because I\'ll be pushing some major updates soon! Keep sharing the app! Thank You :)</string>
     <string name="author_image_content_description">"Image of app's author "</string>
     <string name="donate_appeal_text">Help me code more! Buy me some coffee!!</string>
     <string name="donate_INR">DONATE IN INR</string>
     <string name="donate_USD">DONATE IN USD</string>
     <string name="about">About</string>
-    <string name="about_author_menu_item_string">About Author</string>
+    <string name="about_author_menu_item_string">About</string>
     <string name="donate_menu_item_string">Donate </string>
     <string name="smartphone">Smartphone</string>
     <string name="human">Human</string>
