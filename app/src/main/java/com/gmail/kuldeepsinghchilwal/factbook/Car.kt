@@ -24,28 +24,29 @@ class Car : Fragment() {
         val dataBindingUtil: FragmentCarBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_car, container, false)
         //viewModel initialized
         viewModel = ViewModelProvider(this).get(FragmentViewModel::class.java)
-        //resource id that will be generated after each click of buttons
-        var carResID = viewModel.resourceId
         //setting text if fragment was recreated due to screen rotation or other factors
-        if (carResID != 0) {
-            dataBindingUtil.carFactTextview.setText(carResID)
+        if (viewModel.resourceId != 0) {
+            dataBindingUtil.carFactTextview.setText(viewModel.resourceId)
         }
         //if fragment is being created for the first time. We generate new id to avoid blank screen
         else {
 //shuffling the list
             viewModel.shuffledList = numberOfFacts.shuffled()
-            carResID = resources.getIdentifier(carIdGenerator(), "string", context?.packageName)
-            dataBindingUtil.carFactTextview.setText(carResID)
-
+            viewModel.resourceId = resources.getIdentifier(carIdGenerator(), "string", context?.packageName)
+            dataBindingUtil.carFactTextview.setText(viewModel.resourceId)
         }
+        //resource id that will be generated after each click of buttons
+        var carResID = viewModel.resourceId
         //setting onClick listener on next button
         dataBindingUtil.carNext.setOnClickListener {
-            if (viewModel.shuffleInd <=8 ) {
+            //viewModel.shuffleInd <= n-2
+            if (viewModel.shuffleInd <=25 ) {
                 viewModel.shuffleInd++
                 carResID = resources.getIdentifier(carIdGenerator(), "string", context?.packageName)
+                viewModel.resourceId = carResID
             }
-            //if its the last id
-            if (viewModel.shuffleInd==9 ){
+            //if its the last id (n-1)
+            if (viewModel.shuffleInd==26 ){
                 Toast.makeText(this.context, "CONGRATULATIONS! you have read all facts in our data!", Toast.LENGTH_SHORT).show()
             }
             dataBindingUtil.carFactTextview.setText(carResID)
@@ -58,6 +59,7 @@ class Car : Fragment() {
                 viewModel.shuffleInd--
                 Log.i("car previous","shuffle Ind = ${viewModel.shuffleInd}")
                 carResID = resources.getIdentifier(carIdGenerator(),"string",context?.packageName)
+                viewModel.resourceId = carResID
                 dataBindingUtil.carFactTextview.setText(carResID)
             }
 
@@ -69,7 +71,9 @@ class Car : Fragment() {
 
 //setting onclick listener on share button
         dataBindingUtil.carShare.setOnClickListener {
-            startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, getString(carResID)))
+                //declaring our intent action
+                startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, getString(carResID)))
+
         }
         return dataBindingUtil.root
     }

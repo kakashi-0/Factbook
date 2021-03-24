@@ -48,18 +48,19 @@ class Smartphone : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         //setting resource id variable that will be used to store generated ids for sharing fact
-        var smartphoneResId = 0
+        var smartphoneResId = viewModel.resourceId
 
         //setting onclick listener for  next buton
         binding.smartphoneNext.setOnClickListener {
-            if (viewModel.shuffleInd <= 8) {
+            //viewModel.shuffleInd <= n-2
+            if (viewModel.shuffleInd <= 18) {
                 viewModel.shuffleInd++
                 smartphoneResId = resources.getIdentifier(smartphoneIdGenerator(), "string", context?.packageName)
                 //saving resource id for viewModel
                 viewModel.resourceId = smartphoneResId
             }
-            //if its the last id
-            if (viewModel.shuffleInd == 9) {
+            //if its the last id(n-1)
+            if (viewModel.shuffleInd == 19) {
                 Toast.makeText(
                     this.context,
                     "CONGRATULATIONS! you have read all facts in our data!",
@@ -76,6 +77,7 @@ class Smartphone : Fragment() {
                 viewModel.shuffleInd--
                 smartphoneResId =
                     resources.getIdentifier(smartphoneIdGenerator(), "string", context?.packageName)
+                viewModel.resourceId = smartphoneResId
                 binding.smartphoneTextview.setText(smartphoneResId)
             } else {
                 Toast.makeText(this.context, "No previous fact to display!", Toast.LENGTH_SHORT)
@@ -85,10 +87,8 @@ class Smartphone : Fragment() {
 
         //setting onclick listener for send button
         binding.smartphoneShare.setOnClickListener {
-            startActivity(
-                Intent(Intent.ACTION_SEND).setType("text/plain")
-                    .putExtra(Intent.EXTRA_TEXT, getString(smartphoneResId))
-            )
+                //declaring our intent action
+                startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, getString(smartphoneResId)))
         }
     }
 

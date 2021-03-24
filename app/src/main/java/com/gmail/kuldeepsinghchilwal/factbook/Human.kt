@@ -46,19 +46,20 @@ class Human : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         //setting resource id variable that will be used to store generated ids for sharing fact
-        var humanResId = 0
+        var humanResId = viewModel.resourceId
 
         //setting onclick listener for  next buton
         binding.humanNext.setOnClickListener {
-            if (viewModel.shuffleInd <=8 ) {
+            //viewModel.shuffleInd <= n-2
+            if (viewModel.shuffleInd <=18 ) {
                 viewModel.shuffleInd++
                 humanResId = resources.getIdentifier(humanIdGenerator(),"string",context?.packageName)
                 //saving resource id for viewModel
                 viewModel.resourceId = humanResId
             }
 
-            //if its the last id
-            if (viewModel.shuffleInd==9 ){
+            //if its the last id(n-1)
+            if (viewModel.shuffleInd==19 ){
                 Toast.makeText(this.context, "CONGRATULATIONS! you have read all facts in our data!", Toast.LENGTH_SHORT).show()
             }
 
@@ -71,6 +72,7 @@ class Human : Fragment() {
                 //getting previous index then current one
                 viewModel.shuffleInd--
                 humanResId = resources.getIdentifier(humanIdGenerator(),"string",context?.packageName)
+                viewModel.resourceId = humanResId
                 binding.humanTextview.setText(humanResId)
             }
 
@@ -82,8 +84,9 @@ class Human : Fragment() {
 
         //setting onclick listener for send button
         binding.humanShare.setOnClickListener {
-            startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT,getString(humanResId)))
-        }
+                //declaring our intent action
+                startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, getString(humanResId)))
+               }
     }
     /**
      * This function is used to generate ids to fetch facts from string file

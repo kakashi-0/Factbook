@@ -5,7 +5,10 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.databinding.DataBindingUtil.setContentView
 import com.gmail.kuldeepsinghchilwal.factbook.databinding.ActivityInterstitialAdBinding
+import com.google.android.gms.ads.AdError
+import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.admanager.AdManagerAdRequest
 import com.google.android.gms.ads.admanager.AdManagerInterstitialAd
@@ -19,31 +22,14 @@ class InterstitialAd : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_interstitial_ad)
+        binding = setContentView(this, R.layout.activity_interstitial_ad)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         //ad
-        var InterstitialAdRequest = AdManagerAdRequest.Builder().build()
-
-
-            AdManagerInterstitialAd.load(
-                this,
-                "/6499/example/interstitial",
-                InterstitialAdRequest,
-                object : AdManagerInterstitialAdLoadCallback() {
-                    override fun onAdFailedToLoad(adError: LoadAdError) {
-                        Log.d(TAG, adError.message)
-                        mAdManagerInterstitialAd = null
-                    }
-
-                    override fun onAdLoaded(interstitialAd: AdManagerInterstitialAd) {
-                        Log.d(TAG, "Ad was loaded.")
-                        mAdManagerInterstitialAd = interstitialAd
-                    }
-                })
             var adRequest = AdManagerAdRequest.Builder().build()
 
             AdManagerInterstitialAd.load(
                 this,
-                "/6499/example/interstitial",
+                getString(R.string.test_interstitial_ad),
                 adRequest,
                 object : AdManagerInterstitialAdLoadCallback() {
                     override fun onAdFailedToLoad(adError: LoadAdError) {
@@ -56,6 +42,17 @@ class InterstitialAd : AppCompatActivity() {
                         mAdManagerInterstitialAd = interstitialAd
                     }
                 })
+        mAdManagerInterstitialAd?.fullScreenContentCallback = object: FullScreenContentCallback() {
+            override fun onAdDismissedFullScreenContent() {
+            }
+
+            override fun onAdFailedToShowFullScreenContent(adError: AdError?) {
+            }
+
+            override fun onAdShowedFullScreenContent() {
+                mAdManagerInterstitialAd = null;
+            }
+        }
             binding.watchAD.setOnClickListener {
                     if (mAdManagerInterstitialAd != null) {
                         mAdManagerInterstitialAd?.show(this)

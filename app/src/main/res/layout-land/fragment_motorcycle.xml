@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MotorcycleFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/layoutForFragments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/motorcycleTextview"
+            style="@style/layoutForFragments"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/motorcycleShare"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/motorcyclePrevious"
+            style="@style/PreviousNextButton"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="@string/previous_button"
+            app:layout_constraintBottom_toBottomOf="@+id/motorcycleShare"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/motorcycleShare"
+            app:layout_constraintTop_toTopOf="@+id/motorcycleShare" />
+
+        <Button
+            android:id="@+id/motorcycleNext"
+            style="@style/PreviousNextButton"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="@string/next_button"
+            app:layout_constraintBottom_toBottomOf="@+id/motorcycleShare"
+            app:layout_constraintEnd_toStartOf="@+id/motorcycleShare"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/motorcycleShare" />
+
+        <Button
+            android:id="@+id/motorcycleShare"
+            style="@style/shareButton"
+            android:layout_width="231dp"
+            android:layout_height="68dp"
+            android:text="@string/share_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/motorcyclePrevious"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/motorcycleNext"
+            app:layout_constraintTop_toBottomOf="@+id/motorcycleTextview" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

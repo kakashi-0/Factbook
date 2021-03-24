@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DogFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/layoutForFragments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/dogTextview"
+            style="@style/layoutForFragments"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/dogShare"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/dogPrevious"
+            style="@style/PreviousNextButton"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="@string/previous_button"
+            app:layout_constraintBottom_toBottomOf="@+id/dogShare"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/dogShare"
+            app:layout_constraintTop_toTopOf="@+id/dogShare" />
+
+        <Button
+            android:id="@+id/dogNext"
+            style="@style/PreviousNextButton"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="@string/next_button"
+            app:layout_constraintBottom_toBottomOf="@+id/dogShare"
+            app:layout_constraintEnd_toStartOf="@+id/dogShare"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dogShare" />
+
+        <Button
+            android:id="@+id/dogShare"
+            style="@style/shareButton"
+            android:layout_width="231dp"
+            android:layout_height="68dp"
+            android:text="@string/share_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/dogPrevious"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/dogNext"
+            app:layout_constraintTop_toBottomOf="@+id/dogTextview" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

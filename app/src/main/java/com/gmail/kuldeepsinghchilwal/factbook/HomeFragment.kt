@@ -52,7 +52,9 @@ class HomeFragment : Fragment() {
             if (viewModel.ind >=2) {
                 //getting previous index then current one
                 viewModel.ind--
-                binding.Fact.setText(viewModel.resIdList[viewModel.ind])
+                //saving resource id for viewModel
+                viewModel.resourceId = viewModel.resIdList[viewModel.ind]
+                binding.Fact.setText(viewModel.resourceId)
             }
             else{
                 Toast.makeText(this.context, "No previous fact to display!", Toast.LENGTH_SHORT).show()

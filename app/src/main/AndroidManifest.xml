@@ -17,14 +17,18 @@
             android:name=".About"
             android:label="@string/about"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".InterstitialAd" />
+        <activity android:name=".InterstitialAd"
+            android:parentActivityName=".MainActivity"/>
         <!--
         This is the sample AdMob App ID. Insert your own AdMob App ID in quotes
         https://googlemobileadssdk.page.link/admob-android-update-manifest
         -->
+        <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
+        <!--Application Id: ca-app-pub-6359533933916142~6200086810-->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713" /> <!-- setting splash screen -->
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+        <!-- setting splash screen -->
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/SplashScreenStyle">

@@ -4,7 +4,7 @@
     <item
         android:id="@+id/about"
         android:title="@string/about_menu_item_string" />
-    <item
-        android:id="@+id/donateFragment"
-        android:title="@string/donate_menu_item_string" />
+<!--    <item-->
+<!--        android:id="@+id/donateFragment"-->
+<!--        android:title="@string/donate_menu_item_string" />-->
 </menu>

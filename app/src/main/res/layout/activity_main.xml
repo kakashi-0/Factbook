@@ -17,16 +17,17 @@
             <fragment
                 android:id="@+id/nav_host_fragment_container"
                 android:name="androidx.navigation.fragment.NavHostFragment"
-                android:layout_width="389dp"
-                android:layout_height="643dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_marginStart="11dp"
                 android:layout_marginEnd="11dp"
                 app:defaultNavHost="true"
                 app:layout_constraintBottom_toTopOf="@+id/publisherAdView"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.606"
+                app:layout_constraintVertical_chainStyle="packed"
                 app:navGraph="@navigation/navigation" />
 
             <com.google.android.gms.ads.doubleclick.PublisherAdView
@@ -36,13 +37,11 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 app:adSize="BANNER"
-                app:adUnitId="/6499/example/banner"
+                app:adUnitId="@string/test_banner_mainActivity"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.494"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.976" />
+                app:layout_constraintTop_toBottomOf="@+id/nav_host_fragment_container" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.navigation.NavigationView

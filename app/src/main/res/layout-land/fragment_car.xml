@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Car">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/layoutForFragments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/carFactTextview"
+            style="@style/layoutForFragments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/carShare"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="2" />
+
+        <Button
+            android:id="@+id/carShare"
+            style="@style/shareButton"
+            android:layout_width="231dp"
+            android:layout_height="68dp"
+            android:text="@string/share_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/carPrevious"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/carNext"
+            app:layout_constraintTop_toBottomOf="@+id/carFactTextview"
+            app:layout_constraintVertical_weight="1" />
+
+        <Button
+            android:id="@+id/carPrevious"
+            style="@style/PreviousNextButton"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:text="@string/previous_button"
+            app:layout_constraintBottom_toBottomOf="@+id/carShare"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/carShare"
+            app:layout_constraintTop_toTopOf="@+id/carShare" />
+
+        <Button
+            android:id="@+id/carNext"
+            style="@style/PreviousNextButton"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="@string/next_button"
+            app:layout_constraintBottom_toBottomOf="@+id/carShare"
+            app:layout_constraintEnd_toStartOf="@+id/carShare"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/carShare" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

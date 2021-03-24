@@ -266,7 +266,10 @@
     <!-- This is an ad unit ID for an interstitial test ad. Replace with your own interstitial ad unit id.
      For more information, see https://support.google.com/admob/answer/3052638
   -->
-    <string name="interstitial_ad_unit_id">YOUR_INTERSTITIAL_AD_UNIT_ID</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-6359533933916142/4887005148</string>
+    <string name="banner_ad_unit_main_activity">ca-app-pub-6359533933916142/6306337523</string>
+    <string name="test_interstitial_ad">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="test_banner_mainActivity">ca-app-pub-3940256099942544/6300978111</string>
     <string name="thank_you_for_adviewing">Hi! Thank you for viewing this advertisement. This will keep me motivated.</string>
     <string name="watch_Adv">Watch Ad</string>
 

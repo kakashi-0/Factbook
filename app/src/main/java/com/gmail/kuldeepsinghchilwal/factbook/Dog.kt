@@ -47,18 +47,19 @@ class Dog : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         //setting resource id variable that will be used to store generated ids for sharing fact
-        var dogResId = 0
+        var dogResId = viewModel.resourceId
 
         //setting onclick listener for  next buton
         binding.dogNext.setOnClickListener {
-            if (viewModel.shuffleInd <=8 ) {
+            //viewModel.shuffleInd <= n-2
+            if (viewModel.shuffleInd <=18 ) {
                 viewModel.shuffleInd++
                 dogResId = resources.getIdentifier(dogIdGenerator(),"string",context?.packageName)
                 //saving resource id for viewModel
                 viewModel.resourceId = dogResId
             }
-            //if its the last id
-            if (viewModel.shuffleInd==9 ){
+            //if its the last id(n-1)
+            if (viewModel.shuffleInd==19 ){
                 Toast.makeText(this.context, "CONGRATULATIONS! you have read all facts in our data!", Toast.LENGTH_SHORT).show()
             }
 
@@ -71,6 +72,7 @@ class Dog : Fragment() {
                 //getting previous index then current one
                 viewModel.shuffleInd--
                 dogResId = resources.getIdentifier(dogIdGenerator(),"string",context?.packageName)
+                viewModel.resourceId = dogResId
                 binding.dogTextview.setText(dogResId)
             }
 
@@ -82,8 +84,9 @@ class Dog : Fragment() {
 
         //setting onclick listener for send button
         binding.dogShare.setOnClickListener {
-            startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT,getString(dogResId)))
-        }
+                //declaring our intent action
+                startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, getString(dogResId)))
+              }
     }
     /**
      * This function is used to generate ids to fetch facts from string file

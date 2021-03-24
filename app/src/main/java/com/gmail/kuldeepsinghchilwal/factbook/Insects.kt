@@ -48,18 +48,19 @@ class Insects : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         //setting resource id variable that will be used to store generated ids for sharing fact
-        var insectResId = 0
+        var insectResId = viewModel.resourceId
 
         //setting onclick listener for  next buton
         binding.insectsNext.setOnClickListener {
-            if (viewModel.shuffleInd <=8 ) {
+            //viewModel.shuffleInd <= n-2
+            if (viewModel.shuffleInd <=18 ) {
                 viewModel.shuffleInd++
                 insectResId = resources.getIdentifier(insectIdGenerator(),"string",context?.packageName)
                 //saving resource id for viewModel
                 viewModel.resourceId = insectResId
             }
-            //if its the last id
-            if (viewModel.shuffleInd==9 ){
+            //if its the last id(n-1)
+            if (viewModel.shuffleInd==19 ){
                 Toast.makeText(this.context, "CONGRATULATIONS! you have read all facts in our data!", Toast.LENGTH_SHORT).show()
             }
 
@@ -72,6 +73,7 @@ class Insects : Fragment() {
                 //getting previous index then current one
                 viewModel.shuffleInd--
                 insectResId = resources.getIdentifier(insectIdGenerator(),"string",context?.packageName)
+                viewModel.resourceId = insectResId
                 binding.insectsTextview.setText(insectResId)
             }
 
@@ -83,8 +85,9 @@ class Insects : Fragment() {
 
         //setting onclick listener for send button
         binding.insectsShare.setOnClickListener {
-            startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT,getString(insectResId)))
-        }
+                //declaring our intent action
+                startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, getString(insectResId)))
+                }
     }
     /**
      * This function is used to generate ids to fetch facts from string file
