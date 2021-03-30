@@ -9,9 +9,22 @@
         style="@style/layoutForFragments">
 
         <Button
+            android:id="@+id/startButton"
+            style="@style/shareButton"
+            android:layout_width="135dp"
+            android:layout_height="67dp"
+            android:text="@string/start_button"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ShareButton"
+            app:layout_constraintEnd_toEndOf="@+id/ShareButton"
+            app:layout_constraintStart_toStartOf="@+id/ShareButton"
+            app:layout_constraintTop_toTopOf="@+id/ShareButton" />
+
+        <Button
             android:id="@+id/ShareButton"
             style="@style/shareButton"
             android:text="@string/share_button"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/PreviousButton"
             app:layout_constraintStart_toEndOf="@+id/NextButton"
@@ -38,6 +51,7 @@
             android:text="@string/next_button"
             android:textColor="@color/white"
             android:textStyle="bold"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@+id/ShareButton"
             app:layout_constraintEnd_toStartOf="@+id/ShareButton"
             app:layout_constraintStart_toStartOf="parent"
@@ -51,6 +65,7 @@
             android:text="@string/previous_button"
             android:textColor="@color/white"
             android:textStyle="bold"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@+id/ShareButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ShareButton"

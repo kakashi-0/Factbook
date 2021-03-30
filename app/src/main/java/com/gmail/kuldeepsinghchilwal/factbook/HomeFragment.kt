@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -32,8 +33,18 @@ class HomeFragment : Fragment() {
         //setting text if fragment was recreated due to screen rotation or other factors
         if (resID != 0) {
             binding.Fact.setText(resID)
+            binding.NextButton.isVisible = true
+            binding.PreviousButton.isVisible = true
+            binding.ShareButton.isVisible = true
+            binding.startButton.isVisible = false
         }
 
+        binding.startButton?.setOnClickListener {
+            binding.NextButton.isVisible = true
+            binding.PreviousButton.isVisible = true
+            binding.ShareButton.isVisible = true
+            binding.startButton.isVisible = false
+        }
         //next button on click listener
         binding.NextButton.setOnClickListener {
             resID = resources.getIdentifier(viewModel.randomIdGenerator(), "string", context?.packageName)

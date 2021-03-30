@@ -5,8 +5,7 @@
     <string name="previous_button">Prev</string>
     <string name="share_button">Share Fact</string>
     <string name="title_activity_home">HomeActivity</string>
-    <string name="welcome_text">Hi, Select categories from menu or click next for random facts</string>
-    <string name="car_facts">Facts about Cars</string>
+    <string name="welcome_text">Hi! Select categories from menu or click Start for random facts.</string>
     <string name="watch_ad_request">Watch an ad for me</string>
     <string name="solar_system">Solar system</string>
     <string name="car">Cars</string>
@@ -272,6 +271,7 @@
     <string name="test_banner_mainActivity">ca-app-pub-3940256099942544/6300978111</string>
     <string name="thank_you_for_adviewing">Hi! Thank you for viewing this advertisement. This will keep me motivated.</string>
     <string name="watch_Adv">Watch Ad</string>
+    <string name="start_button">Start</string>
 
 
 </resources>
