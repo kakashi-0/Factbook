@@ -44,6 +44,15 @@ class HomeFragment : Fragment() {
             binding.PreviousButton.isVisible = true
             binding.ShareButton.isVisible = true
             binding.startButton.isVisible = false
+            resID = resources.getIdentifier(viewModel.randomIdGenerator(), "string", context?.packageName)
+            //saving resource id for viewModel
+            viewModel.resourceId = resID
+            //incrementing list index
+            viewModel.ind++
+            //adding the element created to mutable list
+            viewModel.resIdList.add(viewModel.ind,resID)
+            //Displaying resource text
+            binding.Fact.setText(resID)
         }
         //next button on click listener
         binding.NextButton.setOnClickListener {
@@ -75,10 +84,11 @@ class HomeFragment : Fragment() {
         //share button on click listener
         binding.ShareButton.setOnClickListener {
             if (resID != 0) {
+                var shareString = getString(viewModel.resIdList[viewModel.ind]) + "\n \n *\n *\n *\nFor more amazing facts Download FactBook:"+ "https://play.google.com/store/apps/details?id=com.gmail.kuldeepsinghchilwal.factbook"
                 //declaring our intent action
                 startActivity(
                     Intent(Intent.ACTION_SEND).setType("text/plain")
-                        .putExtra(Intent.EXTRA_TEXT, getString(viewModel.resIdList[viewModel.ind]))
+                        .putExtra(Intent.EXTRA_TEXT, shareString)
                 )
             }
             else{

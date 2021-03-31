@@ -80,8 +80,9 @@ class SolarSystem : Fragment() {
 
         //setting onclick listener for send button
         binding.solarSysShare.setOnClickListener {
-                //declaring our intent action
-                startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, getString(solarSystemResId)))
+            var shareString = getString(solarSystemResId) + "\n \n *\n *\n *\nFor more amazing facts Download FactBook:"+ "https://play.google.com/store/apps/details?id=com.gmail.kuldeepsinghchilwal.factbook"
+            //declaring our intent action
+                startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, shareString))
                   }
     }
     /**

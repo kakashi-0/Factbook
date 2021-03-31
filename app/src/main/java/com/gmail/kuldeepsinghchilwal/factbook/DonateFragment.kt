@@ -10,7 +10,7 @@ import androidx.databinding.DataBindingUtil
 import com.gmail.kuldeepsinghchilwal.factbook.databinding.FragmentDonateBinding
 
 
-class DonateFragment : Fragment() {
+class onateFragment : Fragment() {
     lateinit var binding: FragmentDonateBinding
 
     override fun onCreateView(

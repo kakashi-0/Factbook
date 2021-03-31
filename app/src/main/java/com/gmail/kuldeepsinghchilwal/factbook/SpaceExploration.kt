@@ -85,8 +85,10 @@ class SpaceExploration : Fragment() {
 
         //setting onclick listener for send button
         binding.spaceExplorationShare.setOnClickListener {
-                //declaring our intent action
-                startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, getString(spaceExploreResId)))
+            var shareString = getString(spaceExploreResId) + "\n \n *\n *\n *\nFor more amazing facts Download FactBook:"+ "https://play.google.com/store/apps/details?id=com.gmail.kuldeepsinghchilwal.factbook"
+
+            //declaring our intent action
+                startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, shareString))
                  }
     }
     /**

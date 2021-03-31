@@ -44,9 +44,4 @@
                 android:title="@string/spaceExplore" />
             </menu>
     </item>
-    <item android:title="@string/rate_us_navmenu" />
-    <item
-        android:id="@+id/interstitialAd"
-        android:title="@string/watch_ad_request"
-        android:visible="true" />
 </menu>

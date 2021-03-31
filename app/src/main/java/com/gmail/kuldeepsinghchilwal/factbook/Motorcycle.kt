@@ -80,8 +80,10 @@ class Motorcycle : Fragment() {
 
         //setting onclick listener for send button
         binding.motorcycleShare.setOnClickListener {
-                //declaring our intent action
-                startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, getString(motorcycleResId)))
+            var shareString = getString(motorcycleResId) + "\n \n *\n *\n *\nFor more amazing facts Download FactBook:"+ "https://play.google.com/store/apps/details?id=com.gmail.kuldeepsinghchilwal.factbook"
+
+            //declaring our intent action
+                startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, shareString))
                 }
     }
     /**

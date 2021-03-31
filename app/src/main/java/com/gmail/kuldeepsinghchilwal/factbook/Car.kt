@@ -1,6 +1,7 @@
 package com.gmail.kuldeepsinghchilwal.factbook
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -71,8 +72,9 @@ class Car : Fragment() {
 
 //setting onclick listener on share button
         dataBindingUtil.carShare.setOnClickListener {
+            var shareString = getString(carResID) + "\n *\n *\n *\nFor more amazing facts Download FactBook:"+ "https://play.google.com/store/apps/details?id=com.gmail.kuldeepsinghchilwal.factbook"
                 //declaring our intent action
-                startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, getString(carResID)))
+                startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, shareString))
 
         }
         return dataBindingUtil.root

@@ -84,8 +84,9 @@ class Dog : Fragment() {
 
         //setting onclick listener for send button
         binding.dogShare.setOnClickListener {
-                //declaring our intent action
-                startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, getString(dogResId)))
+            var shareString = getString(dogResId) + "\n *\n *\n *\nFor more amazing facts Download FactBook:"+ "https://play.google.com/store/apps/details?id=com.gmail.kuldeepsinghchilwal.factbook"
+            //declaring our intent action
+                startActivity(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, shareString))
               }
     }
     /**
