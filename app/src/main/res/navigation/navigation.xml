@@ -7,17 +7,9 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:label="Random Facts"
+        android:label="FactBook"
         android:name="com.gmail.kuldeepsinghchilwal.factbook.HomeFragment"
         tools:layout="@layout/fragment_home"/>
-    <fragment
-        android:id="@+id/testFragment"
-        android:name="com.gmail.kuldeepsinghchilwal.factbook.TestFragment"
-        tools:layout="@layout/fragment_test" />
-    <fragment
-        android:id="@+id/donateFragment"
-        android:label="Donate"
-        android:name="com.gmail.kuldeepsinghchilwal.factbook.DonateFragment" />
     <fragment
         android:id="@+id/carFactsFragment"
         android:name="com.gmail.kuldeepsinghchilwal.factbook.Car"
@@ -60,10 +52,6 @@
         android:id="@+id/catFragment"
         android:name="com.gmail.kuldeepsinghchilwal.factbook.Cat"
         android:label="@string/cat" />
-    <activity
-        android:id="@+id/interstitialAd"
-        android:name="com.gmail.kuldeepsinghchilwal.factbook.InterstitialAd"
-        tools:layout="@layout/activity_interstitial_ad" />
     <activity
         android:id="@+id/about"
         android:name="com.gmail.kuldeepsinghchilwal.factbook.About"
