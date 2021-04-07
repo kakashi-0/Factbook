@@ -34,12 +34,13 @@ class MainActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.nav_host_fragment_container)
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
         NavigationUI.setupWithNavController(binding.navView, navController)
+        //banner Ad
         MobileAds.initialize(this) {}
         val bannerAdRequest = Builder().build()
         binding.publisherAdView.loadAd(bannerAdRequest)
 
         //interstitial ad
-        var adRequest = AdManagerAdRequest.Builder().build()
+        val adRequest = AdManagerAdRequest.Builder().build()
 
         AdManagerInterstitialAd.load(
             this,
@@ -62,11 +63,13 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onAdShowedFullScreenContent() {
-                mAdManagerInterstitialAd = null;
+                mAdManagerInterstitialAd = null
             }
         }
-
     }
+
+
+
     //navigation menu and nav bar back button
     override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.nav_host_fragment_container)

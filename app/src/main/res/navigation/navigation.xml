@@ -12,45 +12,45 @@
         tools:layout="@layout/fragment_home"/>
     <fragment
         android:id="@+id/carFactsFragment"
-        android:name="com.gmail.kuldeepsinghchilwal.factbook.Car"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.factFragments.Car"
         android:label="@string/car"
         tools:layout="@layout/fragment_car" />
     <fragment
         android:id="@+id/solarSystemFragment"
-        android:name="com.gmail.kuldeepsinghchilwal.factbook.SolarSystem"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.factFragments.SolarSystem"
         android:label="@string/solar_system" />
     <fragment
         android:id="@+id/smartphoneFragment"
-        android:name="com.gmail.kuldeepsinghchilwal.factbook.Smartphone"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.factFragments.Smartphone"
         android:label="@string/smartphone" />
     <fragment
         android:id="@+id/humanFragment"
-        android:name="com.gmail.kuldeepsinghchilwal.factbook.Human"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.factFragments.Human"
         android:label="@string/human" />
     <fragment
         android:id="@+id/dogFragment"
-        android:name="com.gmail.kuldeepsinghchilwal.factbook.Dog"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.factFragments.Dog"
         android:label="@string/dog" />
     <fragment
         android:id="@+id/insectsFragment"
-        android:name="com.gmail.kuldeepsinghchilwal.factbook.Insects"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.factFragments.Insects"
         android:label="@string/insect" />
     <fragment
         android:id="@+id/motorcycleFragment"
-        android:name="com.gmail.kuldeepsinghchilwal.factbook.Motorcycle"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.factFragments.Motorcycle"
         android:label="@string/motorcycle" />
 
     <fragment
         android:id="@+id/shoesFragment"
-        android:name="com.gmail.kuldeepsinghchilwal.factbook.Shoes"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.factFragments.Shoes"
         android:label="@string/shoes" />
     <fragment
         android:id="@+id/spaceExplorationFragment"
-        android:name="com.gmail.kuldeepsinghchilwal.factbook.SpaceExploration"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.factFragments.SpaceExploration"
         android:label="@string/spaceExplore" />
     <fragment
         android:id="@+id/catFragment"
-        android:name="com.gmail.kuldeepsinghchilwal.factbook.Cat"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.factFragments.Cat"
         android:label="@string/cat" />
     <activity
         android:id="@+id/about"

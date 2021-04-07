@@ -267,6 +267,11 @@
     <string name="test_banner_mainActivity">ca-app-pub-3940256099942544/6300978111</string>
     <string name="watch_Adv">Watch Ad</string>
     <string name="start_button">Start</string>
+    <string name="daily_fact_notification_channel_id">Daily Facts</string>
+    <string name="notification_app_name">FactBook</string>
+    <string name="daily_fact_notification_description">Daily facts to read</string>
+    <string name="dailyFact_notification_channeName">Daily Facts</string>
+    <string name="daily_fact_notification_text">Want to read an Amazing Fact?</string>
 
 
 </resources>
