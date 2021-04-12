@@ -1,0 +1,31 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/themes_header">
+        <ListPreference
+            android:entries="@array/Select_theme_style"
+            android:entryValues="@array/Select_theme_style_values"
+            android:key="app_theme"
+            android:title="@string/select_theme_pref" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/notification_header">
+
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:key="daily_notification"
+            app:title="@string/daily_notification_enabled" />
+
+<!--        <ListPreference-->
+<!--            app:dependency="@string/daily_notification_enabled"-->
+<!--            app:title="@string/notification_timing"-->
+<!--            app:entries="@array/notification_time_hour"-->
+<!--            app:entryValues="@array/notification_time_hour"/>-->
+
+<!--    <EditTextPreference-->
+<!--        app:dependency="daily_notification"-->
+<!--        app:key="notification_timing"-->
+<!--        app:title="@string/notification_timing"-->
+<!--        app:useSimpleSummaryProvider="true"/>-->
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -6,16 +6,16 @@
     <string name="share_button">Share Fact</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="welcome_text">Hi! Select categories from menu or click Start for random facts.</string>
-    <string name="watch_ad_request">Watch an ad for me</string>
+    <string name="overflow_menu_watch_ad_request">Watch an ad for me</string>
     <string name="solar_system">Solar system</string>
     <string name="car">Cars</string>
     <string name="category_navmenu">Category</string>
-    <string name="rate_us_navmenu">Rate us</string>
+    <string name="overflow_menu_rate_us">Rate us</string>
     <string name="author_name">By Kuldeep Chilwal</string>
     <string name="about_text">Hi reader! I\'m an engineer by profession and Indian by heart. This app is a project I took to provide you with some cool facts about things we see everyday without the intrusive full screen ads! Hope you are enjoying it! This is just a beginning, stay with me because I\'ll be pushing some major updates soon! Keep sharing the app! Thank You :)</string>
     <string name="author_image_content_description">"Image of app's author "</string>
     <string name="about">About</string>
-    <string name="about_menu_item_string">About</string>
+    <string name="overflow_menu_about">About</string>
     <string name="smartphone">Smartphone</string>
     <string name="human">Human</string>
     <string name="dog">Dog</string>
@@ -270,8 +270,38 @@
     <string name="daily_fact_notification_channel_id">Daily Facts</string>
     <string name="notification_app_name">FactBook</string>
     <string name="daily_fact_notification_description">Daily facts to read</string>
-    <string name="dailyFact_notification_channeName">Daily Facts</string>
+    <string name="dailyFact_notification_channelName">Daily Facts</string>
     <string name="daily_fact_notification_text">Want to read an Amazing Fact?</string>
+    <string name="overflow_menu_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="themes_header">Theme</string>
+
+    <!-- Theme Preferences -->
+    <string name="dark_theme_enable">Dark mode</string>
+
+
+    <!-- Sync Preferences -->
+    <string name="notification_header">Notification</string>
+    <string name="daily_notification_enabled">Daily notification</string>
+    <string name="notification_timing">Receive notification at :    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="select_theme_pref">Select theme</string>
 
 
 </resources>

@@ -91,7 +91,7 @@ class HomeFragment : Fragment() {
 
         createChannel(
             getString(R.string.daily_fact_notification_channel_id),
-            getString(R.string.dailyFact_notification_channeName)
+            getString(R.string.dailyFact_notification_channelName)
         )
 
 

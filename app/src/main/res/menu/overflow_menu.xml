@@ -3,12 +3,16 @@
 
     <item
         android:id="@+id/about"
-        android:title="@string/about_menu_item_string" />
+        android:title="@string/overflow_menu_about" />
     <item
         android:id="@+id/rateUs"
-        android:title="@string/rate_us_navmenu" />
+        android:title="@string/overflow_menu_rate_us" />
     <item
         android:id="@+id/interstitialAd"
-        android:title="@string/watch_ad_request" />
+        android:title="@string/overflow_menu_watch_ad_request" />
+
+    <item
+        android:id="@+id/settings"
+        android:title="@string/overflow_menu_settings"/>
 
 </menu>

@@ -8,11 +8,15 @@ import android.util.Log
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import androidx.preference.PreferenceManager
+import androidx.preference.SwitchPreferenceCompat
 import com.gmail.kuldeepsinghchilwal.factbook.databinding.ActivityMainBinding
+import com.gmail.kuldeepsinghchilwal.factbook.viewmodels.HomeFragmentViewModel
 import com.google.android.gms.ads.AdError
 import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
@@ -34,7 +38,24 @@ class MainActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.nav_host_fragment_container)
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
         NavigationUI.setupWithNavController(binding.navView, navController)
-        //banner Ad
+
+        val selectThemeValues = resources.getStringArray(R.array.Select_theme_style_values)
+        // The apps theme is decided depending upon the saved preferences on app startup
+        when (PreferenceManager.getDefaultSharedPreferences(this)
+            .getString("app_theme", getString(R.string.system_defined))) {
+            selectThemeValues[0] -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            selectThemeValues[1] -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            selectThemeValues[2] -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+        }
+//        when (PreferenceManager.getDefaultSharedPreferences(this)
+//            .getBoolean("daily_notification", true)){
+//
+//        }
+
+
+
+
+                //banner Ad
         MobileAds.initialize(this) {}
         val bannerAdRequest = Builder().build()
         binding.publisherAdView.loadAd(bannerAdRequest)

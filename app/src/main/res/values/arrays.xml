@@ -1,0 +1,38 @@
+<resources>
+    <!-- Daily Notification Preference -->
+    <string-array name="notification_time_hour">
+        <item>12:00</item>
+        <item>1:00</item>
+        <item>2:00</item>
+        <item>3:00</item>
+        <item>4:00</item>
+        <item>5:00</item>
+        <item>6:00</item>
+        <item>7:00</item>
+        <item>8:00</item>
+        <item>9:00</item>
+        <item>10:00</item>
+        <item>11:00</item>
+    </string-array>
+
+    <string-array name="notification_am_pm">
+        <item>am</item>
+        <item>pm</item>
+    </string-array>
+
+    <string-array name="Select_theme_style">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>System defined</item>
+    </string-array>
+
+    <string-array name="Select_theme_style_values">
+        <item>MODE_NIGHT_NO</item>
+        <item>MODE_NIGHT_YES</item>
+        <item>MODE_NIGHT_FOLLOW_SYSTEM</item>
+    </string-array>
+
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="system_defined">System defined</string>
+</resources>

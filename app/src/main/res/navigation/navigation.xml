@@ -57,5 +57,10 @@
         android:name="com.gmail.kuldeepsinghchilwal.factbook.About"
         android:label="About"
         tools:layout="@layout/activity_about" />
+    <activity
+        android:id="@+id/settings"
+        android:name="com.gmail.kuldeepsinghchilwal.factbook.settings.SettingsActivity"
+        android:label="Settings"
+        tools:layout="@layout/settings_activity"/>
 
 </navigation>
